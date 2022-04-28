@@ -15,11 +15,16 @@
 
 ## Installation
 
+To begin with, make sure the right permissions are given to binokulars
+
+```bash
+chmod 777 binokulars
+```
+
 To install R dependencies, open R by running:
 ```bash
 R
 ```
-
 And run the following R commands:
 
 ```r
@@ -34,13 +39,7 @@ library(parallel)
 library(MASS)
 ```
 
-Also, make sure the right permissions are given to binokulars
-
-```bash
-chmod 777 binokulars
-```
-
-Finally, we need to export binokular´s path to the .bashrc file. Run:
+Finally, we need to export binokular´s path to the .bashrc file. Run in linux bash:
 
 ```bash
 cd ~
@@ -68,7 +67,7 @@ binokulars --h
 
 To test this tool, a Single Fragment Epiread format file is required to begin with (https://huishenlab.github.io/biscuit/epiread_format/#single-fragment-epireads).
 
-However, this is not the input for binokulars: a few steps of processing are required (see below, starting from single_fragment.epiread).
+This file is just a few lines of code away from becoming the input for binokulars; see below, starting from single_fragment.epiread:
 
 ```bash
 # Count Cs and Ts in Fwd and Rv read
