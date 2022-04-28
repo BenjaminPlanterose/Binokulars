@@ -46,7 +46,7 @@ cd ~
 vim .bashrc
 ```
 
-Press *i* to insert text and write at the end of the file the following line:
+Press *I* to insert text and write at the end of the file the following line:
 ```bash
 export PATH="$PATH:/absolute_route_to_binokulars/"
 ```
