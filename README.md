@@ -33,7 +33,6 @@ Also, make sure the right permissions are given to binokulars
 
 ```bash
 chmod 777 binokulars
-htop
 ```
 
 Finally, export path in .bashrc. Verify this step by running
@@ -44,10 +43,11 @@ binokulars --h
 
 ## Example
 
-```bash
-./binomL.sh -t absolute_path_to_regions.txt -i absolute_path_to_folder_CHR -l 200 -N 1000 -f 500 -R 4 -o test_results -c 4
-```
+An example regions.txt file is given under /example/. To run 
 
+```bash
+binokulars -t absolute_path_to_regions.txt -i absolute_path_to_folder_CHR -l 200 -N 1000 -f 500 -R 4 -o test_results -c 4
+```
 
 
 Please contact me at b.planterosejimenez at erasmusmc.nl for any questions or issues concerning the scripts.
