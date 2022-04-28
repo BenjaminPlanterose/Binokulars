@@ -1,0 +1,4 @@
+#!/bin/bash
+
+Rscript --vanilla binokulars.R --regions regions.txt --window.length 200 --offset 100 --epiread.file sd_epiread --plot F
+
