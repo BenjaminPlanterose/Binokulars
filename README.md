@@ -15,7 +15,12 @@
 
 ## Installation
 
-To install R dependencies, run the following R commands:
+To install R dependencies, open R by running:
+```bash
+R
+```
+
+And run the following R commands:
 
 ```r
 # To install
