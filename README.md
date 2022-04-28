@@ -42,17 +42,17 @@ cd ~
 vim .bashrc
 ```
 
-Press I to insert text and write at the end of the file the following line:
+Press *i* to insert text and write at the end of the file the following line:
 ```bash
 export PATH="$PATH:/absolute_route_to_binokulars/"
 ```
-To save and close VIM, press ESC, write wq and press enter. Finally, we source the .bashrc by running:
+To save changes and close VIM, press *Esc* key, write *wq* and press enter. Finally, we source the .bashrc by running:
 
 ```bash
 source .bashrc
 ```
 
-Verify this step by running:
+Verify this step by executing:
 
 ```bash
 # This should display the help page for binokulars
