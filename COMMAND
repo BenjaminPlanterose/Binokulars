@@ -1,3 +1,0 @@
-
-./binomL.sh -t /media/ultron/2tb_disk2/0_startallover/followup_meQTLs/logL/software/regions.txt -i /media/ultron/2tb_disk2/0_startallover/followup_meQTLs/logL/chr12_epiread/CHR -l 200 -N 1000 -R 4 -o UM_batch1 -c 4
-
