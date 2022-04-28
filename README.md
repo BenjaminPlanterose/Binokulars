@@ -35,9 +35,27 @@ Also, make sure the right permissions are given to binokulars
 chmod 777 binokulars
 ```
 
-Finally, export path in .bashrc. Verify this step by running
+Finally, we need to export binokular´s path to the .bashrc file. Run:
 
 ```bash
+cd ~
+vim .bashrc
+```
+
+Press I to insert text and write at the end of the file the following line:
+```bash
+export PATH="$PATH:/absolute_route_to_binokulars/"
+```
+To save and close VIM, press ESC, write wq and press enter. Finally, we source the .bashrc by running:
+
+```bash
+source .bashrc
+```
+
+Verify this step by running:
+
+```bash
+# This should display the help page for binokulars
 binokulars --h
 ```
 
@@ -45,7 +63,7 @@ binokulars --h
 
 To test this tool, a Single Fragment Epiread format file is required to begin with (https://huishenlab.github.io/biscuit/epiread_format/#single-fragment-epireads).
 
-However, this is not the input for binokulars and a few steps of processing are required (see below, starting from single_fragment.epiread).
+However, this is not the input for binokulars: a few steps of processing are required (see below, starting from single_fragment.epiread).
 
 ```bash
 # Count Cs and Ts in Fwd and Rv read
