@@ -43,12 +43,31 @@ binokulars --h
 
 ## Example
 
-An example regions.txt file is given under /example/. To run 
+To test this tool, a Single Fragment Epiread format file is required to begin with (https://huishenlab.github.io/biscuit/epiread_format/#single-fragment-epireads).
+
+However, this is not the input for binokulars and a few steps of processing are required (see below, starting from single_fragment.epiread).
 
 ```bash
-binokulars -t absolute_path_to_regions.txt -i absolute_path_to_folder_CHR -l 200 -N 1000 -f 500 -R 4 -o test_results -c 4
+# Count Cs and Ts in Fwd and Rv read
+awk '{ print $1 "\t" $3 "\t" gsub("C","C",$4) "\t" gsub("T","T",$4) "\t" gsub("C","C",$8) "\t" gsub("T","T",$8)}' single_fragment.epiread > CT_reads.txt
+
+# Sort CT file by chromosome and location
+sort -k1,1 -k2n CT_reads.txt > CT_reads_sorted.txt
+
+# Create a CHR directory, copy the sorted CT reads and split the files into different chromosomes. Remove copy of the sorted reads.
+mkdir CHR
+cp CT_reads_sorted.txt ./CHR
+cd CHR
+awk -F '\t' '{print>$1}' CT_reads_sorted.txt
+rm CT_reads_sorted.txt
 ```
 
+To run the example, a test file regions.txt is given under /example/. To run:
+
+```bash
+cd example
+binokulars -t absolute_path_to_regions.txt -i absolute_path_to_folder_CHR -l 200 -N 1000 -f 500 -R 4 -o test_results -c 4
+```
 
 Please contact me at b.planterosejimenez at erasmusmc.nl for any questions or issues concerning the scripts.
 

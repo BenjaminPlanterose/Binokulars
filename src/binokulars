@@ -2,7 +2,7 @@
 
 # Manual page
 if [ "$1" == "-h" ] || [ "$1" == "--h" ] || [ "$1" == "--help" ] || [ "$1" == "-help" ]; then
-  echo "Usage: $0 -t FILE -i FILE [-l INT -N INT -s CHAR -R INT -o CHAR -p INT -c INT]" >&2
+  echo "Usage: $0 -t FILE -i FILE [-l INT -N INT -R INT -o CHAR -c INT -f INT]" >&2
   echo
   echo "   -t           A file containing target chromosomic locations (one per row) in the following format chr1:1234-3456."
   echo "   -i           An input directory that includes sorted single_fragment.epiread files per chromosome (see Biscuit manual page for more details: https://huishenlab.github.io/biscuit/epiread_format/#single-fragment-epireads)."

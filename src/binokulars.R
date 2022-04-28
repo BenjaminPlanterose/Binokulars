@@ -23,7 +23,7 @@ setwd(res_dir)
 capture.output(
 print(paste('target_file = ', target_file, '; epiread_chr_dir = ', epiread_chr_dir, '; bin_length = ', bin_length, 
             '; N_iter = ', N_iter, '; seed = ', seed, 
-            '; res_dir = ', res_dir, '; nCores = ', nCores, sep = '')), file = 'params.txt')
+            '; res_dir = ', res_dir, '; Lflank = ', Lflank, '; nCores = ', nCores, sep = '')), file = 'params.txt')
 
 # Load dependencies
 library(data.table)
