@@ -42,14 +42,34 @@ Obtain manual page by running:
 ```bash
 cd <path_to_binokulars>/src/
 bash binokulars --h
+# Usage: binokulars -t FILE -i FILE [-l INT -N INT -R INT -o CHAR -c INT -f INT]
+#
+#   -t           A file containing target chromosomic locations (one per row) in the following format chr1:1234-3456.
+#   -i           An input directory that includes sorted single_fragment.epiread files per chromosome (see Biscuit manual page for more details: https://huishenlab.github.io/biscuit/epiread_format/#single-fragment-epireads).
+#   -l           Bin length. Default value is 200 bp.
+#   -N           Number of iterations for the permutation test; default value is 1000.
+#   -R           Pseudo-random number generator seed; default value is 1.
+#   -o           output directory; default value is results.
+#   -c           Number of cores to employ; default value is 1.
+#   -f           Flank length added left and right to each region; default value is 500.
 ```
 
 ## Test run
 
-Under ```/test_run/``` you may find example data. This consists of a folder /CHR/ that includes a file per each chromosome, containing the following fields (without header):
+Under ```/test_run/``` you may find example data: 
 
+* ```im_regions.txt``` - List of intermediately-methylated (im) regions on which you would like to run Binokulars.
+* ```CHR``` directory - includes a file per chromosome (for the sake of debugging, solely chr12 is provided).
+	* ```chr12``` - Each line corresponds to a read pair from a paired-end WGBS and contains the following fields:
+		* (chr): on which chromosome the given read aligned.
+		* (start): Position at which the read begins.
+		* (C_Fw): Number of methylated cytosines in the forward read (i.e. paired-end WGBS sequencing).
+		* (T_Fw): Number of unmethylated cytosines in the forward read (i.e. paired-end WGBS sequencing).
+		* (C_Rv): Number of methylated cytosines in the reverse read (i.e. paired-end WGBS sequencing).
+		* (T_Rv): Number of unmethylated cytosines in the reverse read (i.e. paired-end WGBS sequencing).
 
-```
+You may inspect the content of chr12 by running:
+```bash
 head <path_to_binokulars>/test_run/CHR/chr12
 # (chr)	(start) (C_Fw)	(T_Fw)	(C_Rv)	(T_Rv)
 # chr12	500004	1	0	0	0
@@ -62,14 +82,19 @@ head <path_to_binokulars>/test_run/CHR/chr12
 ```
 
 
-
-
-To run the example, a test file regions.txt is given under /example/. To run:
+To run the example:
 
 ```bash
-cd example
-binokulars -t absolute_path_to_regions.txt -i absolute_path_to_folder_CHR -l 200 -N 1000 -f 500 -R 4 -o test_results -c 4
+bash <path_to_binokulars>/src/binokulars --h -t <path_to_binokulars>/test_run/im_regions.txt -i <path_to_binokulars>/test_run/CHR -l 200 -N 1000 -f 500 -R 4 -o test_results -c 1
 ```
+
+## Run on your own data
+
+In order to obtain the ```/CHR/``` directory, a substantial amount of parsing is required. If you plan to run Binokulars genome-wide, please visit our [JRC_seeker repository](https://github.com/BenjaminPlanterose/JRC_seeker).
+
+
+
+
 
 
 Please contact me at b.planterosejimenez at erasmusmc.nl for any questions or issues concerning the scripts.
