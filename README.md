@@ -5,20 +5,18 @@
 #### Benjamin Planterose Jiménez, Brontë Kolar, Manfred Kayser, Athina Vidaki
 Department of Genetic Identification, Erasmus MC University Medical Center Rotterdam, Rotterdam, the Netherlands.
 
-
 ## Requirements
 
     Operating system: tested on Ubuntu 18.04.6 LTS
     R: tested on R version 4.1.2 (2021-11-01) -- "Bird Hippie" & R version 4.2.2 Patched (2022-11-10 r83330) -- "Innocent and Trusting"
 
+For issues/questions on Binokulars, either [report an issue](https://github.com/BenjaminPlanterose/Binokulars/issues) or simply contact me via b.planterosejimenez at erasmusmc.nl
 
 ## Dependencies
 
 #### [R](https://cran.r-project.org/)
 
-To install R, click on the hyperlink above and follow instructions. To download dependency R-packages, run the following:
-
-Open R by running:
+To install R, click on the hyperlink above and follow instructions. To download dependency R-packages, do as follows. Open R by running:
 ```bash
 R
 ```
@@ -81,7 +79,6 @@ head <path_to_binokulars>/test_run/CHR/chr12
 
 ```
 
-
 To run the example:
 
 ```bash
@@ -93,10 +90,5 @@ bash <path_to_binokulars>/src/binokulars --h -t <path_to_binokulars>/test_run/im
 
 In order to obtain the ```/CHR/``` directory, a substantial amount of parsing is required. If you plan to run Binokulars genome-wide, please visit our [JRC_seeker repository](https://github.com/BenjaminPlanterose/JRC_seeker).
 
-
-
-
-
-
-Please contact me at b.planterosejimenez at erasmusmc.nl for any questions or issues concerning the scripts.
+You may find at ```src/opt/``` an example script on how to parse into the right format with [BISCUIT](https://huishenlab.github.io/biscuit/) and several bash commands, starting from fastq files.
 
