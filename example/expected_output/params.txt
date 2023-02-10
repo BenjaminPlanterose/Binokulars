@@ -1,1 +1,0 @@
-[1] "target_file = ./regions.txt; epiread_chr_dir = /media/ultron/2tb_disk2/0_startallover/followup_meQTLs/logL/chr12_epiread/CHR; bin_length = 200; N_iter = 1000; seed = 4; res_dir = /home/ultron/Git/Binokulars/example/test_results; Lflank = 500; nCores = 4"
