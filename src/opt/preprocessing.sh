@@ -14,7 +14,7 @@ tabix -p vcf my_pileup.vcf.gz
 # Variant calling
 biscuit vcf2bed -t snp my_pileup.vcf.gz > snps.bed
 
-# Parse into the Single Fragment Epiread format
+# Parse pileup into the Single Fragment Epiread format
 mkdir tmp
 biscuit epiread -o temp.epiread -O -B snps.bed my_reference.fa my_output.bam > temp.epiread 
 sort -T ./tmp -k2,2 -k3,3n temp.epiread | awk 'BEGIN{{ qname="" ; rec="" }} 
@@ -28,7 +28,7 @@ awk '{ print $1 "\t" $3 "\t" gsub("C","C",$4) "\t" gsub("T","T",$4) "\t" gsub("C
 # Sort CT file by chromosome and location
 sort -k1,1 -k2n CT_reads.txt > CT_reads_sorted.txt
 
-# Create a CHR directory, copy the sorted CT reads and split the files into different chromosomes. Remove copy of the sorted reads.
+# Create a CHR directory, copy the sorted CT reads and split the file into different chromosomes. Remove copy of the sorted reads.
 mkdir CHR
 cp CT_reads_sorted.txt ./CHR
 cd CHR

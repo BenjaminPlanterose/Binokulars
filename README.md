@@ -56,17 +56,17 @@ bash binokulars --h
 
 Under ```/test_run/``` you may find example data: 
 
-* ```im_regions.txt``` - List of intermediately-methylated (im) regions on which you would like to run Binokulars.
+* ```im_regions.txt``` - List of intermediately-methylated (im) regions
 * ```/CHR/``` directory - includes a file per chromosome (for the sake of debugging, solely chr12 is provided).
 	* ```chr12``` - Each line corresponds to a read pair from a paired-end WGBS experiment and contains the following fields:
-		* (chr): on which chromosome the given read aligned.
-		* (start): Position at which the read begins.
+		* (chr): on which chromosome the given read was aligned to.
+		* (start): Start position of the read.
 		* (C_Fw): Number of methylated cytosines in the forward read (i.e. paired-end WGBS sequencing).
 		* (T_Fw): Number of unmethylated cytosines in the forward read (i.e. paired-end WGBS sequencing).
 		* (C_Rv): Number of methylated cytosines in the reverse read (i.e. paired-end WGBS sequencing).
 		* (T_Rv): Number of unmethylated cytosines in the reverse read (i.e. paired-end WGBS sequencing).
 
-You may inspect the content of chr12 by running:
+You may inspect the content of ```chr12``` file by running:
 ```bash
 head <path_to_binokulars>/test_run/CHR/chr12
 # (chr)	(start) (C_Fw)	(T_Fw)	(C_Rv)	(T_Rv)
@@ -82,7 +82,7 @@ head <path_to_binokulars>/test_run/CHR/chr12
 To run the example:
 
 ```bash
-bash <path_to_binokulars>/src/binokulars --h -t <path_to_binokulars>/test_run/im_regions.txt \\
+bash <path_to_binokulars>/src/binokulars --h -t <path_to_binokulars>/test_run/im_regions.txt \
 -i <path_to_binokulars>/test_run/CHR -l 200 -N 1000 -f 500 -R 4 -o test_results -c 1
 ```
 
