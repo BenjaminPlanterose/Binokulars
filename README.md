@@ -88,7 +88,9 @@ bash <path_to_binokulars>/src/binokulars --h -t <path_to_binokulars>/test_run/im
 
 ## Run on your own data
 
-In order to obtain the ```/CHR/``` directory, a substantial amount of parsing is required. If you plan to run Binokulars genome-wide, please visit our [JRC_seeker repository](https://github.com/BenjaminPlanterose/JRC_seeker).
+In order to obtain the ```/CHR/``` directory, a substantial amount of parsing is required. You may find at ```src/opt/``` an example script on how to parse into the right format with [BISCUIT](https://huishenlab.github.io/biscuit/) and several bash commands, starting from fastq files.
 
-You may find at ```src/opt/``` an example script on how to parse into the right format with [BISCUIT](https://huishenlab.github.io/biscuit/) and several bash commands, starting from fastq files.
+In any case, if you plan to run Binokulars genome-wide, please visit our [JRC_seeker repository](https://github.com/BenjaminPlanterose/JRC_seeker).
+
+
 
