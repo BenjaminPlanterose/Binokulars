@@ -43,7 +43,7 @@ bash binokulars --h
 # Usage: binokulars -t FILE -i FILE [-l INT -N INT -R INT -o CHAR -c INT -f INT]
 #
 #   -t           A file containing target chromosomic locations (one per row) in the following format chr1:1234-3456.
-#   -i           An input directory that includes sorted single_fragment.epiread files per chromosome (see Biscuit manual page for more details: https://huishenlab.github.io/biscuit/epiread_format/#single-fragment-epireads).
+#   -i           An input directory that includes sorted methylated/unmethylated cytosine counts per chromosome (see Github tutorial for details)."
 #   -l           Bin length. Default value is 200 bp.
 #   -N           Number of iterations for the permutation test; default value is 1000.
 #   -R           Pseudo-random number generator seed; default value is 1.
