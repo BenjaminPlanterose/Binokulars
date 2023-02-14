@@ -5,6 +5,11 @@
 #### Benjamin Planterose Jiménez, Brontë Kolar, Manfred Kayser, Athina Vidaki
 Department of Genetic Identification, Erasmus MC University Medical Center Rotterdam, Rotterdam, the Netherlands.
 
+This repository together with [JRC_seeker](https://github.com/BenjaminPlanterose/JRC_seeker), [JRC_sorter](https://github.com/BenjaminPlanterose/JJRC_sorter) 
+and [JRC_downstream_analysis ](https://github.com/BenjaminPlanterose/JRC_downstream_analysis) are part of the "Simultaneous mapping of epigenetic inter-haplotype, inter-cell and inter-individual 
+variation via the discovery of jointly regulated CpGs in pooled sequencing data" publication (under review).
+
+
 ## Requirements
 
     Operating system: tested on Ubuntu 18.04.6 LTS
