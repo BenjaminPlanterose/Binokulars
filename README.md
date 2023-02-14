@@ -59,7 +59,9 @@ bash binokulars --h
 
 ## Test run
 
-Under ```/test_run/``` you may find example data: 
+The test data was derived from the pooled whole blood WGBS data from old and young men from the study of [Laurentino et al](https://onlinelibrary.wiley.com/doi/full/10.1111/acel.13242).
+
+In this repository, under ```/test_run/``` you may find the example data containing: 
 
 * ```im_regions.txt``` - List of intermediately-methylated (im) regions
 * ```/CHR/``` directory - includes a file per chromosome (for the sake of debugging, solely chr12 is provided).
